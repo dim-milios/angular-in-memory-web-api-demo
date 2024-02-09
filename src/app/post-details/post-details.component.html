@@ -1,0 +1,14 @@
+<div *ngIf="currentPost !== undefined">
+    <h1>{{currentPost.title}}</h1>
+    <div>
+        <p style="max-width: 80ch;">{{currentPost.content}}</p>
+        <div>
+            <span style="color: red; font-size: x-large; margin-right: 5px;">♥</span><span>{{currentPost.likes}}</span>
+            <span style="margin-left: 1rem;">🔗{{currentPost.shares}}</span>
+        </div>
+
+        <p>Written by {{currentPost.author.fullName}} on {{currentPost.createdAt | date}}</p>
+    </div>
+</div>
+
+<div *ngIf="currentPost === undefined">Loading...</div>

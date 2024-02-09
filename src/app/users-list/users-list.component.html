@@ -1,0 +1,21 @@
+<main>
+    <h1>Users</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Index</th>
+                <th>ID</th>
+                <th>Email</th>
+                <th>Full Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of users; index as i">
+                <td>{{i}}</td>
+                <td>{{user.id}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.fullName}}</td>
+            </tr>
+        </tbody>
+    </table>
+</main>

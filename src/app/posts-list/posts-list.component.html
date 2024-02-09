@@ -1,0 +1,17 @@
+<main>
+    <h1>Posts</h1>
+
+    <div *ngFor="let post of posts" [routerLink]="post.id.toString()">
+        <h3>{{post.title}}</h3>
+
+        <p style="max-width: 80ch;">{{post.content | slice:0:40}}...</p>
+        <div>
+            <span style="color: red; font-size: x-large; margin-right: 5px;">♥</span><span>{{post.likes}}</span>
+            <span style="margin-left: 1rem;">🔗{{post.shares}}</span>
+        </div>
+
+        <p>Written by {{post.author.fullName}} on {{post.createdAt | date}}</p>
+        <hr/>
+    </div>
+
+</main>
